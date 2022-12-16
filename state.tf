@@ -59,11 +59,11 @@ resource "aws_dynamodb_table" "bingoapp_terraform_state" {
 
 terraform {
  backend "s3" {
-   bucket         = var.bucket_name
+   bucket         = "bingoapp-terraform-state-bucket"
    key            = "state/terraform.tfstate"
-   region         = "us-east-1"
+   region         = "us-west-1"
    encrypt        = true
    kms_key_id     = "alias/terraform-bucket-key"
-   dynamodb_table = "terraform-state"
+   dynamodb_table = "bingoapp_terraform_state"
  }
 }
