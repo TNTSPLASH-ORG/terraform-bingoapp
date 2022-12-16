@@ -39,7 +39,7 @@ resource "aws_ecs_task_definition" "bingoapp_task" {
   [
     {
       "name": "bingoapp-task",
-      "image": "982250989342.dkr.ecr.us-west-1.amazonaws.com/bingoapp:4e319de325008835c99699db7aaa47e2f2195958",
+      "image": "${var.image_bingoapp}",
       "essential": true,
       "portMappings": [
         {
@@ -120,7 +120,7 @@ resource "aws_lb_listener" "https_listener" {
   load_balancer_arn = aws_alb.bingoapp_load_balancer.arn
   port              = "443"
   protocol          = "HTTPS"
-  certificate_arn = aws_acm_certificate_validation.simonsbingo_com.certificate_arn
+  certificate_arn   = aws_acm_certificate_validation.simonsbingo_com.certificate_arn
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.target_group.arn
