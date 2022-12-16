@@ -5,3 +5,7 @@ variable "image_bingoapp" {
 variable "bucket_name" {
   default = "terraform-state-bucket"
 }
+
+variable "site_name" {
+  default = "simonsbingo.com"
+}
