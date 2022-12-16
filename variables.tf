@@ -3,7 +3,7 @@ variable "image_bingoapp" {
 }
 
 variable "bucket_name" {
-  default = "terraform-state-bucket"
+  default = "bingoapp-terraform-state-bucket"
 }
 
 variable "site_name" {

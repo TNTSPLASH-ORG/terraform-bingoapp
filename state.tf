@@ -46,7 +46,7 @@ resource "aws_s3_bucket_public_access_block" "block" {
 }
 
 resource "aws_dynamodb_table" "bingoapp_terraform_state" {
-  name           = "terraform-state"
+  name           = "bingoapp_terraform_state"
   read_capacity  = 20
   write_capacity = 20
   hash_key       = "LockID"
