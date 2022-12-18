@@ -7,7 +7,7 @@ on:
       - main
 
 env:
-  TARGET_REPO: "git@github.com:TNTSPLASH-ORG/terraform-bingoapp.git"
+  TARGET_REPO: "https://github.com/TNTSPLASH-ORG/terraform-bingoapp.git"
   BRANCH: "main"
   FILE: "variables.tf"
   SEARCH_KEY: "bingoapp:"
