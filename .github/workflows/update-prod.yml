@@ -7,20 +7,10 @@ on:
       - main
 
 env:
-  TARGET_REPO: "https://github.com/TNTSPLASH-ORG/terraform-bingoapp.git"
-  BRANCH: "main"
-  FILE: "variables.tf"
-  SEARCH_KEY: "bingoapp:"
   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
 
 jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: TNTSPLASH-ORG/update-service@7d922ca5e39fa65be6d5381ffeb5dc2c02261bea
   apply:
-    needs: main
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
