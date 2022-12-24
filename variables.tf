@@ -1,5 +1,5 @@
 variable "image_bingoapp" {
-  default = "982250989342.dkr.ecr.us-west-1.amazonaws.com/bingoapp:56292dfa9d6e73cafc5e084cfa5df0acbef04929"
+  default = "982250989342.dkr.ecr.us-west-1.amazonaws.com/bingoapp:839f32f75f116294639a8845862574da4b12a74a"
 }
 
 variable "bucket_name" {
